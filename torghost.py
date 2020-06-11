@@ -129,7 +129,7 @@ def start_torghost():
     os.system('sudo fuser -k 9051/tcp > /dev/null 2>&1')
     print(bcolors.GREEN + '[done]' + bcolors.ENDC)
     print(t() + ' Starting new tor daemon ',)
-    os.system('sudo -u debian-tor tor -f /etc/tor/torghostrc > /dev/null'
+    os.system('sudo -u tor -f /etc/tor/torghostrc > /dev/null'
               )
     print(bcolors.GREEN + '[done]' + bcolors.ENDC)
     print(t() + ' setting up iptables rules',)
