@@ -157,7 +157,7 @@ def start_torghost():
 	iptables -A OUTPUT -m owner --uid-owner $TOR_UID -j ACCEPT
 	iptables -A OUTPUT -j REJECT
 	""" \
-        % subprocess.getoutput('id -ur debian-tor')
+        % subprocess.getoutput('id -ur tor')
 
     os.system(iptables_rules)
     print(bcolors.GREEN + '[done]' + bcolors.ENDC)
